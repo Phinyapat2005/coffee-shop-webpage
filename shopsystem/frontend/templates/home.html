@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-    <h2>Welcome to the Cafe</h2>
-    <a href="{{ url_for('menu') }}">View Menu</a><br>
-    <a href="{{ url_for('cart') }}">View Cart</a><br>
-    <a href="{{ url_for('sales_history') }}">Sales History</a><br>
-    <a href="{{ url_for('inventory') }}">Inventory</a><br>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome to the Cafe</h2>
+<div class="list-group">
+    <a href="{{ url_for('menu') }}" class="list-group-item list-group-item-action">View Menu</a>
+    <a href="{{ url_for('cart') }}" class="list-group-item list-group-item-action">View Cart</a>
+    <a href="{{ url_for('sales_history') }}" class="list-group-item list-group-item-action">Sales History</a>
+    <a href="{{ url_for('inventory') }}" class="list-group-item list-group-item-action">Inventory</a>
+</div>
+{% endblock %}

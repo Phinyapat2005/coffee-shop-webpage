@@ -6,6 +6,7 @@ app.secret_key = 'your_secret_key'
 
 
 @app.route('/')
+
 def index():
     return redirect(url_for('login'))
 

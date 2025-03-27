@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sales History</title>
-</head>
-<body>
-    <h2>Sales History</h2>
-    <ul>
-        {% for sale in sales %}
-        <li>{{ sale[1] }} - ${{ sale[2] }}</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Sales History</h2>
+<ul class="list-group">
+    {% for sale in sales %}
+    <li class="list-group-item">{{ sale[1] }} - ${{ sale[2] }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
